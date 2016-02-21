@@ -31,6 +31,7 @@ source=(#"http://www.kernel.org/pub/linux/kernel/v4.x/${_srcname}.tar.xz"
         '0006-ARM-TLV320AIC23-SoC-Audio-Codec-Fix-errors-reported-.patch'
         '0007-set-default-cubietruck-led-triggers.patch'
         '0008-USB-armory-support.patch'
+	'0009-pcduino3-nano-enable-uart6.patch'
         'config'
         'cmdline'
         'kernel.its'
@@ -46,6 +47,7 @@ md5sums=('1cdac91ce7b1bbdc837bcbabe5e53471'
          '5222447ca6733a635f0014e4286497fd'
          'd65428fd325c67b540f86c59ae29bcff'
          '911c1d70d8659d42bde1844569149233'
+         'b34fb55054eca5d86ea2c23743525488'
          'd0d01791e05c7c2fb61bc46a1c10fcf6'
          '1813b39074d01af6548951764a0f6444'
          '4f2379ed84258050edb858ee8d281678'
@@ -70,6 +72,7 @@ prepare() {
   git apply ../0006-ARM-TLV320AIC23-SoC-Audio-Codec-Fix-errors-reported-.patch
   git apply ../0007-set-default-cubietruck-led-triggers.patch
   git apply ../0008-USB-armory-support.patch
+  git apply ../0009-pcduino3-nano-enable-uart6.patch
 
   cat "${srcdir}/config" > ./.config
 
