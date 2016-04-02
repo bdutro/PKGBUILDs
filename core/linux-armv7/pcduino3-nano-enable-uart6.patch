@@ -1,0 +1,17 @@
+diff --git a/arch/arm/boot/dts/sun7i-a20-pcduino3-nano.dts b/arch/arm/boot/dts/sun7i-a20-pcduino3-nano.dts
+index ddac732..78c20d2 100644
+--- a/arch/arm/boot/dts/sun7i-a20-pcduino3-nano.dts
++++ b/arch/arm/boot/dts/sun7i-a20-pcduino3-nano.dts
+@@ -226,6 +226,12 @@
+ 	status = "okay";
+ };
+ 
++&uart6 {
++	pinctrl-names = "default";
++	pinctrl-0 = <&uart6_pins_a>;
++	status = "okay";
++};
++
+ &usb_otg {
+ 	dr_mode = "otg";
+ 	status = "okay";
